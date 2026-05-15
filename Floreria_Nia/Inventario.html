@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventario Florería</title>
+    <link rel="stylesheet" href="inventario.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>🌸 Inventario Florería</h1>
+
+    <div class="stats">
+      <div class="stat-box">
+        <h2>Total Productos</h2>
+        <p id="totalProductos">0</p>
+      </div>
+
+      <div class="stat-box">
+        <h2>Stock Bajo</h2>
+        <p id="stockBajo">0</p>
+      </div>
+
+      <div class="stat-box">
+        <h2>Total Unidades</h2>
+        <p id="totalUnidades">0</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="top-bar">
+        <input type="text" id="nombre" placeholder="Nombre del producto">
+
+        <select id="categoria">
+          <option value="Flores">Flores</option>
+          <option value="Papelería">Papelería</option>
+          <option value="Decoración">Decoración</option>
+          <option value="Accesorios">Accesorios</option>
+        </select>
+
+        <input type="number" id="stock" placeholder="Stock">
+
+        <input type="number" id="minimo" placeholder="Stock mínimo">
+
+        <button onclick="agregarProducto()">Agregar</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Categoría</th>
+            <th>Stock</th>
+            <th>Stock mínimo</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+
+        <tbody id="tablaProductos"></tbody>
+      </table>
+    </div>
+
+</div>
+<script src="Inventario.js"> </script>
+
+
+</body>
+</html>
